@@ -1,0 +1,18 @@
+{
+  "name": "ecf",
+  "version": "1.0.0",
+  "description": "This is my solution to the project i've been given in order to evaluate my front-end skills.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.3"
+  }
+}

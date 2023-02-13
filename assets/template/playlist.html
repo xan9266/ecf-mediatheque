@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Playlist</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cover/">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="d-flex h-100 text-center text-white bg-dark">
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+        <header class="mb-5">
+          <div>
+            <h3 class="float-md-start mb-0">OMDB Video Library</h3>
+            <nav class="nav nav-masthead justify-content-center float-md-end">
+                <a class="nav-link" href="../../index.html">Home</a>
+                <a class="nav-link active" aria-current="page" href="#">Playlist</a>
+                <a class="nav-link" href="search.html">Search</a>
+            </nav>
+          </div>
+        </header>
+
+        <main class="px-3">
+            <h1>This is your playlist</h1>
+            <p class="lead">Click on the button to create a new entry</p>
+            <button id="showForm" class="btn btn-primary">Create</button>
+            <form id="newEntry">
+                <div class="mb-2">
+                  <label for="newMovie" class="form-label">Movie name</label>
+                  <input type="text" class="form-control" id="newMovie" aria-describedby="textHelp" required>
+                </div>
+                <div class="mb-2">
+                  <label for="movieYear" class="form-label">Movie Year</label>
+                  <input type="number" class="form-control" id="movieYear" aria-describedby="numberHelp" required>
+                </div>
+                <div class="mb-2">
+                    <label for="movieProducer" class="form-label">Movie Producer</label>
+                    <input type="text" class="form-control" id="movieProducer" aria-describedby="textHelp" required>
+                  </div>
+                <button id="validateEntry" type="submit" class="btn btn-primary">Submit</button>
+              </form>
+
+              <div class="mb-2 mt-2">
+                <select id="filterSelect" class="form-control">
+                  <option value="title">Filter by title</option>
+                  <option value="year">Filter by year</option>
+                </select>
+                <button id="filterButton" class="mt-2 btn btn-primary">Filter</button>
+              </div>
+
+              <table id="filmsTable" class="table table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">Movie</th>
+                    <th scope="col">Year</th>
+                    <th scope="col">Producer</th>
+                    <th scope="col">Delete</th>
+                  </tr>
+                </thead>
+                <tbody id="filmList">
+                  <tr>
+                    <td>Deadpool</td>
+                    <td>2016</td>
+                    <td>Tim Miller</td>
+                    <td><button class="btn btn-danger deleteBtn">Delete</button></td>
+                  </tr>
+                  <tr>
+                    <td>Spiderman</td>
+                    <td>2002</td>
+                    <td>Sam Raimi</td>
+                    <td><button class="btn btn-danger deleteBtn">Delete</button></td>
+                  </tr>
+                  <tr>
+                    <td>Scream</td>
+                    <td>1996</td>
+                    <td>Wes Craven</td>
+                    <td><button class="btn btn-danger deleteBtn">Delete</button></td>
+                  </tr>
+                  <tr>
+                    <td>It: Chapter 1</td>
+                    <td>2019</td>
+                    <td>Andy Muschietti</td>
+                    <td><button class="btn btn-danger deleteBtn">Delete</button></td>
+                  </tr>
+                </tbody>
+              </table>
+
+    </main>
+
+    <footer class="mt-auto text-white-50">
+        <div>
+        <p>Video library made by Yann PRIGENT.</p>
+        </div>
+    </footer>
+</div>
+
+<script src="../js/views/add.js"></script>
+</body>
+</html>

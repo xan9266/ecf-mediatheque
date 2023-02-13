@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cover/">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body class="d-flex h-100 text-center text-white bg-dark">
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="mb-5">
+          <div>
+            <h3 class="float-md-start mb-0">OMDB Video Library</h3>
+            <nav class="nav nav-masthead justify-content-center float-md-end">
+                <a class="nav-link" href="../../index.html">Home</a>
+                <a class="nav-link" href="playlist.html">Playlist</a>
+                <a class="nav-link active" aria-current="page" href="#">Search</a>
+            </nav>
+          </div>
+        </header>
+        
+        <main class="mb-auto px-3" id="main-content">
+        <h1>Search your favorite movie!</h1>
+        <form id="search" novalidate>
+            <div class="mb-2">
+              <label for="searchMovie" class="form-label">Movie name</label>
+              <input type="text" class="form-control" id="searchMovie" aria-describedby="textHelp" required>
+            </div>
+            <div class="mb-2">
+              <label for="searchYear" class="form-label">Movie Year</label>
+              <input type="number" class="form-control" id="searchYear" aria-describedby="numberHelp" required>
+            </div>
+            <div class="mb-2">
+                <label for="formSelect">Genre</label>
+                <select class="form-control" id="formSelect">
+                <option value="movie">Movie</option>
+                <option value="series">Series</option>
+                <option value="episode">Episode</option>
+                </select>
+            </div>
+            <button id="validateSearch" type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          <div class="card" style="width: 11rem; ">
+            <img src="../img/defaultImg.jpg" class="card-img-top" alt="default image">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text...</p>
+            </div>
+          </div>
+          <div class="nav-buttons">
+            <button id="prev">Prev</button>
+            <button id="next">Next</button>
+          </div>
+        </main>
+        
+        <footer class="mt-1 text-white-50">
+            <p>Video library made by Yann PRIGENT.</p>
+        </footer>
+
+    </div>
+
+    <script src="../js/views/search.js"></script>
+</body>
+</html>
